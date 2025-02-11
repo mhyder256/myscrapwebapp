@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
+  
+  body {
+    @apply font-sftext text-gray-800 antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    @apply font-sfdisplay font-bold tracking-tighter;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply font-sfdisplay font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+}
